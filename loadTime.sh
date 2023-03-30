@@ -9,7 +9,7 @@ set -x
 #  "loadTime"         variable is that website load time
 
 website='www.namecheap.com'
-slackChannelUrl='https://hooks.slack.com/services/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'
+slackChannelUrl='https://hooks.slack.com/services/zzz/yyy/xxx'
 threshold=5
 
 # finds load time via curl command and assign to loadTime variable. bash doesnt understand float point. So ı used only integer part and removed fraction by cut command. 

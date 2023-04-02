@@ -2,11 +2,14 @@
 
 set -x
 
-## define variable ##
+#  variable explanation;
+
 #  "website"          variable is that which website will be check
 #  "slackChannelUrl"  variable is that which slack url will be used for this alert
-#  "threshold"        variable is that load exceeds threshold
-#  "loadTime"         variable is that website load time
+#  "threshold"        variable is that load exceeds threshold in terms of second
+#  "loadTime"         variable is that website load time in terms of second
+
+# Variables
 
 website='www.namecheap.com'
 slackChannelUrl='https://hooks.slack.com/services/zzz/yyy/xxx'
@@ -16,7 +19,7 @@ threshold=5
 
 loadTime=$(curl -s -o /dev/null -w "%{time_total}\n" $website | cut -d . -f 1)
 
-# if loadTime is greater than threshold which defined above. it send to an alert to slack channel.
+# if loadTime is greater than threshold which defined above. it send to an alert to slack channel. Slack text can be edited inside slack curl.
 
 if [ $loadTime -gt $threshold ] ; then
 

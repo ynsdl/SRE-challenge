@@ -1,0 +1,9 @@
+1- reproduce the case
+2- after reproduce, find and save ERROR and Exception etc. belongs to case
+3- try to take manually backup to prevent possible data loss
+4- do impact analysis
+5- how many days back up we have ? can successfully return from back up ?
+6- if there is a retention policy on backups, disable it
+7- until the problem is being solved, write a script regularly takes backup
+6- there is a risk of loss of customer data at the end of backup feature, Severity is marked as a critical. Severity can be changed depends on customer effect.
+7- create critical issue to relevant teams

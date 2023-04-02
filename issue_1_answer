@@ -1,0 +1,18 @@
+Issue 1
+
+1- check the pods resource consumption. If the pods can not handle load, resource consumption increase. Detect when consumption increases from monitoring tools. try to find the start time of the event
+2- check kubernetes pods healths
+2- Check log files. Is there any ERROR, Exception in log files. If it is, log them.
+3- try to make anomaly detection in logs. Are there any anormal logs in logs for example ; anormal put/get requests to a url, same log over and over, same request comes from same ip address over and over
+4- How would you determine if the load is legitimate or if there is a DDoS attack?       
+   * there are excessive requests comes from only one IP or excessive put/get requests can refer to DDOS atack 
+5- How would you mitigate the load?
+   * if malicious ip is detected, it can be block
+   * apply rate limiting to specific url path which cause high load
+   * pods can scale by increasing pod numbers or can update request and limit resources by increasing 
+6- Suggest several actions to better cope with high traffic
+   * vertical scaling. 
+   * horizontal scaling.
+7- What automated remediation could be configured
+   * Horizontal pod auto scaling can be activated. if memory or cpu treshold exceed, pods automaticaly scale
+   * cluster autoscale. cluster autoscaler changes the number of cluster nodes, while HPA scales the number of running cluster pods
